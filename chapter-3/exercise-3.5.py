@@ -15,8 +15,8 @@ Ciprian Saramet on 2019-11-22
 
 """
 def do_four(f):
-	do_twice(f)
-	do_twice(f)
+    do_twice(f)
+    do_twice(f)
 
 def do_twice(f):
     f()
@@ -26,16 +26,16 @@ def print_beam():
     print('+ - - - -', end="")
 
 def print_pillar():
-	print('|        |        |', end="\n")
+    print('|        |        |', end="\n")
+
+def tier():
+    do_twice(print_beam)
+    print('+')
+    do_four(print_pillar)
 
 def main():
-	do_twice(print_beam)
-	print('+')
-	do_four(print_pillar)
-	do_twice(print_beam)
-	print('+')
-	do_four(print_pillar)
-	do_twice(print_beam)
-	print('+')
+    do_twice(tier)
+    do_twice(print_beam)
+    print('+')
 if __name__ == '__main__':
     main()
